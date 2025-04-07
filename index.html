@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huijari peli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2e;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        body div {
+            background: #2e2e3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 400px;
+        }
+
+        input, button {
+            width: 95%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input {
+            background: #3e3e4e;
+            color: white;
+        }
+
+        button {
+            background: #ff6b6b;
+            color: white;
+            cursor: pointer;
+            width: 95%;
+        }
+
+        button:hover {
+            background: #ff4f4f;
+        }
+
+        #countdown {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #ffcc00;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        ul li {
+            text-align: left;
+            color: rgb(216, 216, 216);
+        }
+    </style>
+</head>
+<body>
+    <h1>HuijaliPewi</h1>
+
+    <div id="startArea">
+        <label>Pelaajien määrä (3–8):</label><br>
+        <input type="number" id="numPlayers" min="3" max="8"><br>
+        <button onclick="startGame()">Aloita peli</button>
+    </div>
+
+    <div id="revealArea" style="display: none;">
+        <button onclick="revealCard()" id="revealBtn">Näytä pelaajakorttini</button>
+        <div id="cardInfo" style="width: 75%;margin: 0 auto;"></div>
+    </div>
+
+    <div id="gameMessage" style="display: none;">
+        <h2>Peli on alkanut!</h2>
+        <p id="countdown">Aikaa jäljellä: 10:00</p>
+    </div>
+
+    <div id="examples" style="display: none;">
+        <h2>Esimerkkikysymyksiä</h2>
+        <ul style="text-align:left; max-width: 300px; margin:auto;">
+            <li>Mitä sinä teet täällä?</li>
+            <li>Mitä sinulla on päällä?</li>
+            <li>Mitä näet ympärilläsi?</li>
+            <li>Millainen tunnelma täällä on?</li>
+        </ul>
+    </div>
+
+    <div id="rules" style="margin-top: 25px;">
+        <h2>Pelin säännöt</h2>
+        <p><strong>Tavoite:</strong> Yrittäkää selvittää, kuka on huijari, ennen kuin aika loppuu.</p>
+        <p><strong>Pelimekaniikka:</strong></p>
+        <ul>
+            <li>Kaikki pelaajat saavat roolin ja paikan – paitsi yksi pelaaja, joka on huijari.</li>
+            <li>Pelaajat vuorottelevat ja esittävät toisilleen kysymyksiä paikasta ja rooleista.</li>
+            <li>Huijari yrittää selvittää paikan muiden keskustelujen perusteella.</li>
+            <li>Muiden tehtävä on paljastaa huijari ilman, että he paljastavat liikaa.</li>
+        </ul>
+        <p><strong>Pelin loppu:</strong></p>
+        <ul>
+            <li>Kun aika loppuu, pelaajat äänestävät, kuka on huijari.</li>
+            <li>Huijari voittaa, jos hän ei jää kiinni – tai jos hän onnistuu arvaamaan paikan oikein.</li>
+            <li>Muut pelaajat voittavat, jos huijari paljastetaan onnistuneesti.</li>
+        </ul>
+    </div>
+
+    <script>
+        const gameData = {
+            paikat: [{"place": "Kirjasto", "roles": ["Siivooja", "Kirjaston hoitaja", "Asiakas", "Pikkulapsi", "Opiskelija", "Piileskelevä valtionrikollinen", "ES-jonne"]}, {"place": "Avaruusasema", "roles": ["Astronautti", "Alieni", "Mekaanikko", "Kapteeni", "Tähtitieteilijä", "Tiedemies", "Salamatkustaja"]}, {"place": "Poliisiasema", "roles": ["Seksuaalirikollinen", "Poliisi", "Timanttivaras", "Kuulustelija", "Arkistotyöntekijä", "Siivooja", "Nuorisorikollinen"]}]
+        };
+
+        let players = [];
+        let currentPlayer = 0;
+        let isCardShown = false;
+        let numPlayers = 0;
+
+        function startGame() {
+            numPlayers = parseInt(document.getElementById("numPlayers").value);
+            if (numPlayers < 3 || numPlayers > 8) {
+                alert("Pelaajien määrän tulee olla 3-8");
+                return;
+            }
+
+            const location = gameData.paikat[Math.floor(Math.random() * gameData.paikat.length)];
+            const shuffledRoles = [...location.roles].sort(() => 0.5 - Math.random());
+
+            players = [];
+
+            for (let i = 0; i < numPlayers - 1; i++) {
+                players.push({ role: shuffledRoles[i % shuffledRoles.length], place: location.place });
+            }
+
+            players.push({ role: "???", place: "???" }); // Huijari
+            players.sort(() => 0.5 - Math.random());
+
+            document.getElementById("startArea").style.display = "none";
+            document.getElementById("rules").style.display = "none";
+            document.getElementById("revealArea").style.display = "block";
+            document.getElementById("examples").style.display = "block";
+        }
+
+        function revealCard() {
+            const btn = document.getElementById("revealBtn");
+            const cardInfo = document.getElementById("cardInfo");
+
+            if (!isCardShown) {
+                if (currentPlayer >= numPlayers) {
+                    document.getElementById("revealArea").style.display = "none";
+                    document.getElementById("gameMessage").style.display = "block";
+                    startCountdown();
+                    return;
+                }
+
+                const data = players[currentPlayer];
+                cardInfo.innerHTML = `<h2>Paikka: ${data.place}</h2><h3>Rooli: ${data.role}</h3>`;
+                btn.textContent = "Piilota pelaajakorttini";
+                isCardShown = true;
+            } else {
+                cardInfo.innerHTML = `<h3>Ojenna puhelin seuraavalle pelaajalle</h3><p>Älä paljasta korttiasi muille!</p>`;
+                btn.textContent = "Näytä pelaajakorttini";
+                isCardShown = false;
+                currentPlayer++;
+            }
+        }
+
+        function startCountdown() {
+            let timer = 600;
+            const countdown = document.getElementById("countdown");
+            const interval = setInterval(() => {
+                let minutes = Math.floor(timer / 60);
+                let seconds = timer % 60;
+                countdown.textContent = `Aikaa jäljellä: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                if (timer-- <= 0) {
+                    clearInterval(interval);
+                    countdown.textContent = "Aika on loppunut!";
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

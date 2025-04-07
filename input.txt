@@ -1,0 +1,34 @@
+Kirjasto: Siivooja, Kirjaston hoitaja, Asiakas, Pikkulapsi, Opiskelija, Piileskelevä valtionrikollinen, ES-jonne
+Avaruusasema: Astronautti, Alieni, Mekaanikko, Kapteeni, Tähtitieteilijä, Tiedemies, Salamatkustaja
+Poliisiasema: Seksuaalirikollinen, Poliisi, Timanttivaras, Kuulustelija, Arkistotyöntekijä, Siivooja, Nuorisorikollinen
+Kauppa: Siivooja, Hyllyttäjä, Kassatäti, Asiakas, Eksynyt lapsi, Teinityttö, Bisnesmies
+Sirkus: Trapetsitaiteilija, Pelle, Leijonankesyttäjä, Lipunmyyjä, Lapsikatsoja, Taskuvaras, Vanha ennustaja
+Lentokenttä: Lentäjä, Matkustaja, Tullivirkailija, Salakuljettaja, Itkevä lapsi, Siivooja, Eksynyt turisti
+Koulun juhlasali: Rektori, Oppilas, Opettaja, DJ, Koulukiusaaja, Vanhempi, Väsynyt opinto-ohjaaja
+Hylätty tehdas: Graffititaiteilija, Metallivaras, Urbaani tutkija, Huumeidenkäyttäjä, Aave, Ex-työntekijä, Kuvaaja
+Metsäretki: Partiolainen, Metsästäjä, Eksynyt mummo, Karhu, Retkikaveri, Selviytyjä, Luontokuvaaja
+Sairaala: Lääkäri, Potilas, Sairaanhoitaja, Siivooja, Synnyttävä äiti, Psykiatri, Haamu menneisyydestä
+Kellari: Kotiviinin tekijä, Varas, Lukittu panttivanki, Hämähäkki, Kiinteistönvälittäjä, Lapsi, Salaseuran jäsen
+Ranta: Surffaaja, Jäätelönmyyjä, Hiekkalinnojen rakentaja, Aurinkorasvattu turisti, Varas, Kalastaja, Meduusa
+Ydinvoimala: Ydinfyysikko, Siivooja, Turvamies, Väsynyt insinööri, Aktivisti, Viruksen saastuttama työntekijä, Salainen agentti
+Elokuvateatteri: Lipunmyyjä, Katsoja, Popcorninmyyjä, Elokuvakriitikko, Nukahtanut tyyppi, Teinipari, Näyttelijä naamioituneena
+Rautatieasema: Junakuski, Laiturilla odottava matkustaja, Taskuvaras, Aikatauluista hämmentynyt turisti, Poliisi, Myöhässä oleva liikemies, Koditon muusikko
+Linna: Kuningas, Ritaritar, Hovin juoruilija, Vankilassa viruva salamurhaaja, Keittäjä, Harjoitteleva velho, Aarretta etsivä varas
+Pankki: Pankinjohtaja, Rahaa nostava asiakas, Naamioitunut ryöstäjä, Kassatyöntekijä, Siivooja, IT-asiantuntija, Hämmentynyt mummo
+Merenalainen tukikohta: Sukeltaja, Meribiologi, Hylkeeksi naamioitunut vakoilija, Kapteeni, Teknikkovikainen robotti, Hätäkeskuksen työntekijä, Mustekala
+Museo: Opas, Taidevaras, Koululainen retkellä, Vartija, Vanha taideharrastaja, Restauroija, Elävä muumio
+Jäähalli: Luistelija, Valmentaja, Kaatunut lapsi, Kuuma kaakaon myyjä, Taustalla treenaava jääprinsessa, Siivooja, Paparazzi
+Kahvila: Barista, Kirjoittava runoilija, Treffikumppani, Ärsyyntynyt asiakas, Puhelimessa huutava bisnesnainen, Koiran kanssa tullut mies, Uninen opiskelija
+Autokorjaamo: Mekaanikko, Asiakas, Varkain yöllä hiipivä huijari, Harjoittelija, Romuautojen keräilijä, Tappeluun joutuva kaksikko, Vanha lada
+Yliopisto: Professori, Myöhässä oleva opiskelija, Kahvilatyöntekijä, Filosofi, Tenttiin lukematon opiskelija, Tiedeaktivisti, Tilan varannut juhlaseurue
+Hotelli: Vastaanottovirkailija, Salaperäinen vieras, Siivooja, Sängyn alle piiloutunut vakoilija, Huonepalvelija, Kokki, Pariskunta riitelemässä käytävällä
+Öinen huoltoasema: Kassatyöntekijä, Yön yli ajava rekkakuski, Karkkivaras, Kahvinhakija, Poliisipartio, Vessassa piileskelevä nuori, Salaperäinen moottoripyöräilijä
+Zombie-apokalypsin turvatalo: Entinen lääkäri, Epäluotettava selviytyjä, Haavoittunut lapsi, Salaa purtu henkilö, Varastoista vastaava, Entinen sotilas, Paranoidi johtaja
+Metsästysmaja: Metsästäjä, Metsän henki, Eksynyt retkeilijä, Aavemainen tarinankertoja, Ampumatarkkuutta harjoitteleva teini, Hiljainen erakko, Kettu
+Kahluuallas: Lapsi vesipyssyn kanssa, Huolestunut vanhempi, Päivänvarjon alla nukkuva mummo, Varastettuja kenkiä etsivä, Uimataidoton turisti, Uimaopettaja, Rantaleijona
+Kuntosali: Personal trainer, Fitness-vaikuttaja, Epävarma aloittelija, Hikinen kehonrakentaja, Siivooja, Lapsi juoksumatolla, Pukumies puhelimessa
+TV-studio: Juontaja, Meikkaaja, Kilpailija visailussa, Tekniikkavastaava, Maskeerattu julkkis, Ääniassistentti, Käsikirjoittaja
+Tivoli: Laitteenhoitaja, Vuoristorataan jumiutunut turisti, Pallonheittäjä, Karkkikauppias, Kadonnut lapsi, Noitapuvussa oleva esiintyjä, Teini, joka yrittää voittaa pehmolelun
+Keskiaikainen markkinatori: Kauppias, Taskuvaras, Bardilaulaja, Ritari ilman hevosta, Yrttien myyjä, Ennustaja, Lapsi ihastelemassa miekkoja
+Satama: Merimies, Tullimies, Piilossa oleva siirtolainen, Kalastaja, Jäähyväisiä jättävä pariskunta, Laivakokki, Matkalaukkujen varas
+Sadepäivän bussi: Kuski, Märkä koululainen, Ärsyyntynyt eläkeläinen, Koira sylissä oleva nainen, Uninen opiskelija, Taskuvaras, Rämpyttävä musakuuntelija
